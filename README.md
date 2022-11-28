@@ -14,7 +14,7 @@ Add the following line to `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  api_toggle: ^1.0.0
+  api_toggle: ^1.0.1
 ```
 
 Add the following import to your Dart code:
