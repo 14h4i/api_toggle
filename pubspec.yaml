@@ -1,7 +1,7 @@
 name: api_toggle
 description: API toggle widget - it helps not to call the API multiple times when repeatedly clicking on a widget.
-version: 1.0.0
-homepage:
+version: 1.0.1
+homepage: https://github.com/14h4i/api_toggle
 
 environment:
   sdk: ">=2.18.4 <3.0.0"
