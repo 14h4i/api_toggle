@@ -44,8 +44,6 @@ jobs:
       - name: Analyze project source
         run: dart analyze
         
-      - name: Setup test
-        run: dart pub add --dev test
 
       # Your project will need to have tests in test/ and a dependency on
       # package:test for this step to succeed. Note that Flutter projects will
@@ -53,4 +51,4 @@ jobs:
       - name: Run tests
         run: |
           cd example
-          dart test
+          flutter test
