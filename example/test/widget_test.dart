@@ -16,15 +16,29 @@ void main() {
     await tester.pumpWidget(const MyApp());
 
     // Verify that our counter starts at 0.
-    expect(find.text('0'), findsOneWidget);
-    expect(find.text('1'), findsNothing);
+    expect(find.text('Api Toggle Demo'), findsOneWidget);
 
-    // Tap the '+' icon and trigger a frame.
-    await tester.tap(find.byIcon(Icons.add));
     await tester.pump();
 
-    // Verify that our counter has incremented.
-    expect(find.text('0'), findsNothing);
+    await tester.tap(find.byIcon(Icons.favorite).last);
+
+    // Tap button
+    await tester.pump(const Duration(seconds: 1));
+
+    // Check toggle couter
+    expect(find.text('11'), findsOneWidget);
+    // Check call API couter
+    expect(find.text('1'), findsOneWidget);
+
+    await tester.pump();
+
+    await tester.tap(find.byIcon(Icons.favorite).last);
+
+    // Tap button
+    await tester.pump(const Duration(seconds: 1));
+
+    expect(find.text('10'), findsOneWidget);
+    // Check call API couter
     expect(find.text('1'), findsOneWidget);
   });
 }
